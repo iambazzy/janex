@@ -93,11 +93,12 @@
                   <v-btn
                     depressed
                     x-small
+                    icon
                     color="red"
                     class="white--text ml-3"
                     @click="removeFile(file)"
                   >
-                    Remove
+                    <v-icon>mdi-delete</v-icon>
                   </v-btn>
                 </div>
               </v-card-text>
