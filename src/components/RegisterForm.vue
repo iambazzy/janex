@@ -165,7 +165,7 @@ export default {
    setTimeout(() => {
     this.processing = false;
     this.$emit('submitted')
-   }, 3000)
+   }, 1500)
   },
 
   upload() {

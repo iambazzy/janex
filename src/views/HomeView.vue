@@ -15,10 +15,11 @@
     <v-col
       cols="12"
       md="5"
-      class="pa-3 pa-md-16 form d-flex justify-center align-center"
+      class="pa-3 pa-md-16 form d-flex flex-column justify-center align-center"
       v-if="showThanks"
     >
       <h2 class="pt-6 white--text">Thanks for signing up!</h2>
+      <v-btn class="mt-4" @click="showThanks = !showThanks"> GO BACK </v-btn>
     </v-col>
 
     <v-col v-else cols="12" md="5" class="pa-3 pa-md-16 form">
