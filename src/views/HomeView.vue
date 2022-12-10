@@ -42,7 +42,7 @@ export default {
 
 <style scoped lang="scss">
 .bg {
-  background: url("../assets/image\ 2.png");
+  background: url("../assets/image2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   .overlay {
