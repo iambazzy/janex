@@ -32,7 +32,7 @@
         </small>
       </div>
 
-      <register-form class="pt-6" @submitted="showSubmitted" />
+      <register-form class="pt-6" @submitted="showThanks = true" />
     </v-col>
   </v-row>
 </template>
@@ -52,12 +52,6 @@ export default {
   data() {
     return {
       showThanks: false
-    }
-  },
-  
-  methods: {
-    showSubmitted() {
-      this.showThanks = true;
     }
   }
 }
