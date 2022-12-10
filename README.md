@@ -13,4 +13,5 @@
 
   - Vue.js with Javascript
   - Vuetify as UI library
+#### Link to deployed version - [Janex task](https://janex-two.vercel.app/)
 
