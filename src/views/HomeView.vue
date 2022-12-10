@@ -12,7 +12,16 @@
       </div>
     </v-col>
 
-    <v-col cols="12" md="5" class="pa-3 pa-md-16 form">
+    <v-col
+      cols="12"
+      md="5"
+      class="pa-3 pa-md-16 form d-flex justify-center align-center"
+      v-if="showThanks"
+    >
+      <h2 class="pt-6 white--text">Thanks for signing up!</h2>
+    </v-col>
+
+    <v-col v-else cols="12" md="5" class="pa-3 pa-md-16 form">
       <logo v-if="$vuetify.breakpoint.smAndDown" />
 
       <div class="greetings pt-8 pt-md-14">
@@ -22,7 +31,7 @@
         </small>
       </div>
 
-      <register-form class="pt-6" />
+      <register-form class="pt-6" @submitted="showSubmitted" />
     </v-col>
   </v-row>
 </template>
@@ -33,10 +42,23 @@ import Logo from '@/components/Logo.vue'
 
 export default {
   name: 'Home',
+
   components: {
     RegisterForm,
     Logo
   },
+
+  data() {
+    return {
+      showThanks: false
+    }
+  },
+  
+  methods: {
+    showSubmitted() {
+      this.showThanks = true;
+    }
+  }
 }
 </script>
 

@@ -115,6 +115,7 @@
       depressed
       block
       large
+      :loading="processing"
       @click="register"
     >
       Create account <v-icon class="pl-3">mdi-arrow-right</v-icon>
@@ -129,7 +130,8 @@ export default {
    menu: false,
    isValid: false,
    backup: [],
-   filesUploaded: []
+   filesUploaded: [],
+   processing: false,
   }
  },
 
@@ -157,6 +159,13 @@ export default {
  methods: {
   register() {
    if (!this.$refs.register.validate()) return;
+
+   this.processing = true;
+
+   setTimeout(() => {
+    this.processing = false;
+    this.$emit('submitted')
+   }, 3000)
   },
 
   upload() {
